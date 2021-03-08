@@ -4,15 +4,19 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "dev": "nodemon ./bin/www",
+    "db:reset": "sequelize-cli db:drop; sequelize db:create && sequelize db:migrate && sequelize db:seed:all"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "faker": "^5.4.0",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.7",
     "pg": "^8.5.1",
-    "sequelize": "^6.5.0"
+    "sequelize": "^6.5.0",
+    "sequelize-cli": "^6.2.0"
   }
 }
